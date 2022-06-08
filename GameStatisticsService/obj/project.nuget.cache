@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/dnwq8ehqKPiC6Id24OUfREMmcSxuU/8HD/nYiRgqjCF7AN/lB4q6O4R2JuxE23SXwJm1NE/DRFCm4Cp/cLQ5A==",
+  "dgSpecHash": "8Pas46UVn1ppP8pVE+rjgkJE/GzjZV56skgTVMxl4vNmTLF7zjrz5VdgdBZDTO1zQYQmVS1d6oaCvsqF/R5x5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameHistoryService\\GameHistoryService.csproj",
+  "projectFilePath": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameStatisticsService\\GameStatisticsService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaan-\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\kaan-\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

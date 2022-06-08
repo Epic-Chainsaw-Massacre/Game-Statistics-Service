@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace GameHistoryService.Controllers
+namespace GameStatisticsService.Controllers
 {
     [ApiController]
     [Route("[controller]")]

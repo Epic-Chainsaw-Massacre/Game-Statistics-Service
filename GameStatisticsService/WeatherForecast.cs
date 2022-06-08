@@ -1,4 +1,4 @@
-namespace GameHistoryService
+namespace GameStatisticsService
 {
     public class WeatherForecast
     {

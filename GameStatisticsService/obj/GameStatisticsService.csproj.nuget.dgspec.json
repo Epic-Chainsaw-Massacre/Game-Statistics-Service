@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameHistoryService\\GameHistoryService.csproj": {}
+    "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameStatisticsService\\GameStatisticsService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameHistoryService\\GameHistoryService.csproj": {
+    "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameStatisticsService\\GameStatisticsService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameHistoryService\\GameHistoryService.csproj",
-        "projectName": "GameHistoryService",
-        "projectPath": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameHistoryService\\GameHistoryService.csproj",
+        "projectUniqueName": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameStatisticsService\\GameStatisticsService.csproj",
+        "projectName": "GameStatisticsService",
+        "projectPath": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameStatisticsService\\GameStatisticsService.csproj",
         "packagesPath": "C:\\Users\\kaan-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameHistoryService\\obj\\",
+        "outputPath": "C:\\Users\\kaan-\\source\\repos\\C#\\GameHistoryService\\GameStatisticsService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kaan-\\AppData\\Roaming\\NuGet\\NuGet.Config",
