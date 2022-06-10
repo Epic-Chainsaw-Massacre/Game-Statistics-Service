@@ -9,7 +9,7 @@ for more information about Reverse Hangman Online check the documentation
   - [What kind of data will be saved?](#what-kind-of-data-will-be-saved)
 
 # What is Game Statistics Service?
-This service sits between the service [Reverse Hangman Online Frontend](https://github.com/Epic-Chainsaw-Massacre/reverse-hangman-online-frontend) and the database. In the image below you can see the service and which containers it directly communicates with. This service gets data from the frontend, and saves it to the database. The service can also extract data from the database and give it to the frontend.
+This service sits between the service [Reverse Hangman Online Frontend](https://github.com/Epic-Chainsaw-Massacre/reverse-hangman-online-frontend) and the database. In the image below i highlighted the game statistics service and which containers it directly communicates with. This service gets data from the frontend, and saves it to the database. The service can also extract data from the database and give it to the frontend.
 
 ![image](https://user-images.githubusercontent.com/74303221/173060337-098085b5-4a8b-4c0a-b8f8-7becc982a934.png)
 
