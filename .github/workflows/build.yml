@@ -43,5 +43,8 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Epic-Chainsaw-Massacre_Game-Statistics-Service" /o:"epic-chainsaw-massacre" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          <insert_your_build_command>
+          dotnet clean [Reverse-Hangman-Online-Backend|Reverse-Hangman-Online-Backend] [-c|--configuration Debug]
+            [-f|--framework .NET] [--interactive]
+            [--nologo] [-o|--output .github]
+            [-r|--runtime build] [-v|--verbosity d[etailed]]
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
