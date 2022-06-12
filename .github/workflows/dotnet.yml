@@ -28,7 +28,7 @@ jobs:
       with:
         image: crossychainsaw/game-statistics-service
         tags: latest
-        registry: docker.io
+        registry: GameStatisticsService/docker.io
         dockerfile: GameStatisticsService/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
