@@ -1,3 +1,4 @@
+
 #FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 #WORKDIR /app
 #COPY published/ ./
@@ -20,8 +21,8 @@ FROM build AS publish
 RUN dotnet publish "Game-Statistics-Service.csproj" -c Release -o /app/publish
 
 FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
+WORKDIR /Game-Statistics-Service
+COPY GameStatisticsService/ ./
 ENTRYPOINT ["dotnet", "Game-Statistics-Service.dll"]
 
 #FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
