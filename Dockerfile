@@ -14,7 +14,7 @@ WORKDIR /src
 COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsService/"]
 RUN dotnet restore "GameStatisticsService/GameStatisticsService.csproj"
 COPY . .
-WORKDIR "/src/Game-Statistics-Service"
+WORKDIR "/src/GameStatisticsService"
 RUN dotnet build "GameStatisticsService.csproj" -c Release -o /app/build
 
 FROM build AS publish
