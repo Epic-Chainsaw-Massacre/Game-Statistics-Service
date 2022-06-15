@@ -11,7 +11,7 @@ EXPOSE 5001
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Game-Statistics-Service/Game-Statistics-Service.csproj", "Game-Statistics-Service/"]
+COPY ["GameStatisticsService/Game-Statistics-Service.csproj", "Game-Statistics-Service/"]
 RUN dotnet restore "Game-Statistics-Service/Game-Statistics-Service.csproj"
 COPY . .
 WORKDIR "/src/Game-Statistics-Service"
