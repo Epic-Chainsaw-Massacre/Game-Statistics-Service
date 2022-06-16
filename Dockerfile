@@ -15,12 +15,12 @@ COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsServi
 RUN dotnet restore "GameStatisticsService/GameStatisticsService.csproj"
 COPY . .
 WORKDIR "/src/GameStatisticsService"
-RUN dotnet build "GameStatisticsService.csproj" -c Release -o /app/build
+RUN dotnet build "GameStatisticsService/GameStatisticsService.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "GameStatisticsService.csproj" -c Release -o /app/publish
+RUN dotnet publish "GameStatisticsService/GameStatisticsService.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /Game-Statistics-Service
 COPY GameStatisticsService/ ./
-ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
+ENTRYPOINT ["dotnet", "GameStatisticsService/GameStatisticsService.csproj".dll"]
