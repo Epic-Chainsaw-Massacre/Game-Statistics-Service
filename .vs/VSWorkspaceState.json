@@ -4,6 +4,6 @@
     "\\.github",
     "\\.github\\workflows"
   ],
-  "SelectedNode": "\\.github\\workflows\\build.yml",
+  "SelectedNode": "\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }
