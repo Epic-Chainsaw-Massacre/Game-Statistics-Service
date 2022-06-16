@@ -11,16 +11,16 @@ EXPOSE 5001
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsService/"]
-RUN dotnet restore "GameStatisticsService/GameStatisticsService.csproj"
+COPY ["GameStatisticsService.sln", "GameStatisticsService/"]
+RUN dotnet restore "GameStatisticsService.sln"
 COPY . .
 WORKDIR "/src/GameStatisticsService"
-RUN dotnet build "GameStatisticsService/GameStatisticsService.csproj" -c Release -o /app/build
+RUN dotnet build "GameStatisticsService.sln" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "GameStatisticsService/GameStatisticsService.csproj" -c Release -o /app/publish
+RUN dotnet publish "GameStatisticsService.sln" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /Game-Statistics-Service
 COPY GameStatisticsService/ ./
-ENTRYPOINT ["dotnet", "GameStatisticsService/GameStatisticsService.csproj".dll"]
+ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
