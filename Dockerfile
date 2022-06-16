@@ -1,7 +1,7 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
-WORKDIR /app
-COPY published/ ./
+WORKDIR /src
+COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsService/"]
 ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
 
 #FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
