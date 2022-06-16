@@ -1,8 +1,23 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
-RUN docker pull mcr.microsoft.com/dotnet/sdk:6.0
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsService/"]
+RUN dotnet restore "GameStatisticsService/GameStatisticsService.csproj"
+COPY . .
+WORKDIR "/src/GameStatisticsService"
+RUN dotnet build "GameStatisticsService.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "GameStatisticsService.csproj" -c Release -o /app/build
+
+FROM base AS final
+WORKDIR /app
+copy --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
 
 #FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
