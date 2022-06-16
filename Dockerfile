@@ -16,5 +16,6 @@ RUN dotnet publish "GameStatisticsService.csproj" -c Release -o /app/build
 
 FROM build AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
+
+#COPY --from=publish /app/publish .
