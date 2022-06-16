@@ -1,5 +1,6 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
+RUN docker pull mcr.microsoft.com/dotnet/sdk:6.0
 WORKDIR /src
 COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsService/"]
 ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
