@@ -1,21 +1,13 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY ["GameStatisticsService/GameStatisticsService.csproj", "GameStatisticsService/"]
-RUN dotnet restore "GameStatisticsService/GameStatisticsService.csproj"
+# Build
+FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
+WORKDIR /source
 COPY . .
-WORKDIR "/src/GameStatisticsService"
-RUN dotnet build "GameStatisticsService.csproj" -c Release -o /app/build
+RUN dotnet restore "./GameStatisticsService/GameStatisticsService.csproj" --disable-parallel
+RUN dotnet publish "./GameStatisticsService/GameStatisticsService.csproj" -c release -o /app --no-restore
 
-FROM build AS publish
-RUN dotnet publish "GameStatisticsService.csproj" -c Release -o /app/build
-
-FROM build AS final
+# Run
+FROM mcr.microsoft.com/dotnet/aspnet:6.0-focal
 WORKDIR /app
-ENTRYPOINT ["dotnet", "GameStatisticsService.dll"]
+COPY --from=build /app ./
 
-#COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "GameStatisticsService.dll"] 
